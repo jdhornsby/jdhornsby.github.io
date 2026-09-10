@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Order still matters"
-excerpt: "The first post in this series found that field order sometimes changes output quality, and it ended with a promise to check whether that holds on a small model that doesn't think, from a family other "
+excerpt: "Vertex was alphabetizing my schemas before the model ever saw them, so I dusted off a dead GPU in my home lab and ran the replication myself, off the cloud entirely."
 date: 2026-08-29 22:01:44 +0000
 image: /assets/images/order-still-matters/order-still-matters.png
 ---
