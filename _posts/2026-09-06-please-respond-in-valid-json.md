@@ -37,21 +37,18 @@ There is a subtler problem too. Masking one step at a time is greedy. It takes t
 I want to explore guided decoding first hand, so I built a little [test bed](https://github.com/jdhornsby/guided-decoding) where I can swap models out, implement different guides, and visualize the effect they have on the model's output. I wrote a little toy implementation in Python that defines a guide as:
 
 ```python
-class Guide(Protocol[S]):
-    def init(self) -> S:
-        """Initial state, called once before decoding begins."""
+class Guide(Protocol):
+    def bias(self) -> np.ndarray | None:
+        """Additive logit deltas, shape (vocab_size,), float32, or None.
+        0.0 = no opinion. -inf = banned. Finite non-zero = soft preference. None = skip biasing."""
         ...
 
-    def bias(self, state: S) -> np.ndarray:
-        """Additive logit deltas, shape (vocab_size,), float32. 0.0 = no opinion. -inf = banned. Finite non-zero = soft preference."""
+    def advance(self, token: int) -> None:
+        """Update internal state for the emitted token."""
         ...
 
-    def advance(self, state: S, token: int) -> S:
-        """State after the given token is emitted. Must not mutate `state`."""
-        ...
-
-    def finished(self, state: S) -> bool:
-        """True when the guide has nothing further to say."""
+    def finished(self) -> bool:
+        """True when the guide is done guiding."""
         ...
 ```
 
