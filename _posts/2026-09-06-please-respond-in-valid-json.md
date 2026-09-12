@@ -38,9 +38,9 @@ I want to explore guided decoding first hand, so I built a little [test bed](htt
 
 ```python
 class Guide(Protocol):
-    def bias(self) -> np.ndarray | None:
-        """Additive logit deltas, shape (vocab_size,), float32, or None.
-        0.0 = no opinion. -inf = banned. Finite non-zero = soft preference. None = skip biasing."""
+    def bias(self) -> np.ndarray:
+        """Additive logit deltas, shape (vocab_size,), float32.
+        0.0 = no opinion. -inf = banned. Finite non-zero = soft preference."""
         ...
 
     def advance(self, token: int) -> None:
