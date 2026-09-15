@@ -14,6 +14,12 @@ Right now the subject is mostly language models. They are fascinating at the mom
 
 I will always post code and data. Maybe someone will find it useful one day.
 
+## About me
+
+I've spent close to twenty years as a software engineer, most of it as a principal IC on systems where being wrong is expensive. Large-scale healthcare infrastructure and agentic AI now.
+
+The constraints are different. Non-determinism instead of consistency, latency tails instead of throughput, rubrics instead of SLAs. The shape of the job is the same: figure out what actually happens in production, measure it, decide what to do about it.
+
 ## How I use AI here
 
 I use AI here and at work. It is a powerful tool, but, as with everything, its output must be verified. I tend to use it in the following ways:
