@@ -6,6 +6,8 @@ date: 2026-09-14 20:00:00 +0000
 image: /assets/images/nothing-illegal-happened/nothing-illegal-happened.png
 ---
 
+![](/assets/images/nothing-illegal-happened/nothing-illegal-happened.png)
+
 I have been interested in [guided decoding](/please-respond-in-valid-json) lately. Instead of asking a language model for well-formed output and checking it afterward, you constrain the decoder so it cannot produce anything invalid. A model emits a score for every token in its vocabulary at each step, and the next token gets drawn from those scores. A guide intervenes in that by masking out tokens that violate whatever rule you care about, so the next token is always a valid continuation.
 
 While thinking of interesting problems to apply it to, I recalled a [Dynomight post](https://dynomight.net/chess/) I read a couple years ago about how well language models can play chess. There was one line in that post about using a grammar to force models to pick from the set of legal moves. The post was focused on which models play well and the constraint was just an unimportant detail.
