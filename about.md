@@ -14,19 +14,13 @@ Right now the subject is mostly language models. They are fascinating at the mom
 
 I will always post code and data. Maybe someone will find it useful one day.
 
-## About me
-
-I've spent close to twenty years as a software engineer, most of it as a principal IC on systems where being wrong is expensive. Large-scale healthcare infrastructure and agentic AI now.
-
-The constraints are different. Non-determinism instead of consistency, latency tails instead of throughput, rubrics instead of SLAs. The shape of the job is the same: figure out what actually happens in production, measure it, decide what to do about it.
-
 ## How I use AI here
 
 I use AI here and at work. It is a powerful tool, but, as with everything, its output must be verified. I tend to use it in the following ways:
 
 * Brainstorming. I am working on X, I have tried Y, what else could I consider?
 * Research. I am interested in X, what can you find about it?
-* Coding. Different from how I work at my day job. Here it is mostly autocomplete.
+* Coding. Autocomplete and pair programming partner.
 * Writing. Here is my topic and the outline I have in mind, what else should I add?
 * Editing. Here is a paragraph. Can I make it more concise or clear?
 * Proofreading. Here is my draft. Help me find grammar and spelling issues, validate the links, and check my claims. Am I off anywhere?

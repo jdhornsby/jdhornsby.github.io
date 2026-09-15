@@ -78,7 +78,7 @@ It also arrives there differently. With prefill there is no decision to make. Th
 
 That is the greedy problem from earlier, in miniature. The guide knows the whole target string, but a mask only says yes or no, so the model has no way to tell which of the allowed tokens is on the shorter path. If the guide boosted the longer matches instead of just permitting them, it would have taken `␣useless` and skipped the detour.
 
-My goal was to build and validate the harness. `LiteralGuide` exists to prove that the interface works and that a guide can be swapped in without touching the decode loop. What goes in next I have not settled on. A real grammar is the obvious move, but a soft guide that biases rather than forbids is a different shape of problem and I would like to see what that looks like too.
+My goal was to build and validate the harness. `LiteralGuide` exists to prove that the interface works and that a guide can be swapped in without touching the decode loop. What goes in next I have not settled on. A real grammar is the obvious move, but a soft guide that biases rather than forbids is a different shape of problem and I would like to see what that looks like too. Or maybe something else entirely.
 
 ## Scope and limits
 
