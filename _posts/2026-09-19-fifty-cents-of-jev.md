@@ -109,7 +109,7 @@ I didn't expect it to do well. Chess is hard. It still left me unsatisfied, thou
 
 ## Game changer
 
-So, is Jev a game changer? My short answer is: yes.
+So, is Jev a game changer? I think so.
 
 There are so many natural places to use it right away. Intent routing and policy-based guardrails are two I explored above. The really interesting one to me is online evals. It's common to sample live generations and have an LLM judge score them, often alongside deterministic checks. Jev looks like a natural fit for that, and TypeSafe [pitches it for exactly this](https://typesafe.ai/blog/introducing-system-one-models-and-jev). But it's fast and cheap enough that you don't have to sample. You could score every generation, inline, before it reaches the user. That's the [Jevons paradox](https://en.wikipedia.org/wiki/Jevons_paradox), which the model is named after: make judgment cheap enough and you start putting it everywhere.
 
