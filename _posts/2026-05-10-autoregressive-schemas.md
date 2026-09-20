@@ -10,7 +10,7 @@ image: /assets/images/autoregressive-schemas/autoregressive-shemas.png
 
 LLMs are good at producing structured output from messy input. That property is core to agentic systems and to tasks like structured data extraction. Both are work I do day to day, at my job and on side projects. A good prompt goes a long way, but how much does the output schema itself matter?
 
-I started looking at this because of a class of failure I kept hitting. The output would be locally fine, every field reasonable on its own, but globally broken. I ran into it doing structured data extraction from financial documents on another project, and I ran into it again on a personal side project at [madejustfor.me](https://madejustfor.me/) that generates personalized story-game adventures for kids. Different domains, but the failures looked similar, so I wanted to understand why.
+I started looking at this because of a class of failure I kept hitting. The output would be locally fine, every field reasonable on its own, but globally broken. I ran into it doing structured data extraction from financial documents on another project, and I ran into it again on a side project that generates personalized story-game adventures for kids. Different domains, but the failures looked similar, so I wanted to understand why.
 
 ## The eel
 
