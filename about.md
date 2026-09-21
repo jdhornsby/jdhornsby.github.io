@@ -16,9 +16,7 @@ I will always post code and data. Maybe someone will find it useful one day.
 
 ## About me
 
-I've spent close to twenty years as a software engineer, most of it as a principal IC on systems where being wrong is expensive. Large-scale healthcare infrastructure and agentic AI now.
-
-The constraints are different. Non-determinism instead of consistency, latency tails instead of throughput, rubrics instead of SLAs. The shape of the job is the same: figure out what actually happens in production, measure it, decide what to do about it.
+Just doing stuff for the lulz.
 
 ## How I use AI here
 
