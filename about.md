@@ -6,7 +6,7 @@ date: 2026-05-10 16:50:55 +0000
 permalink: /about/
 ---
 
-Just doing stuff for the lulz with a small home lab, some cloud credits, and a dream. I do it because its interesting and I enjoy it. I do try to be thorough, but if there is a mistake its mine. Hit me with a GH issue to let me know.
+Just doing stuff for the lulz with a small home lab, some cloud credits, and a dream. I do it because it's interesting and I enjoy it. I do try to be thorough, but if there is a mistake it's mine. Hit me with a GH issue to let me know.
 
 ## About me
 
@@ -14,4 +14,4 @@ I've been in the software game twenty years and writing code for thirty. I am st
 
 ## How I use AI here
 
-I mostly just yell at it. Its good at trying things fast, brainstorming ideas, checking my work, and generating the cringiest header images possible. Its bad at being right and writes code I find offensive.
+I mostly just yell at it. It's good at trying things fast, brainstorming ideas, checking my work, and generating the cringiest header images possible. It's bad at being right and writes code I find offensive.
