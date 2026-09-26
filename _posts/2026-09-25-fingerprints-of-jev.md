@@ -39,9 +39,9 @@ o200k was close on almost everything except digits, where Jev matched Qwen3 and 
 
 Every difference is consistent with Jev splitting text into smaller tokens than o200k does, while staying within o200k's existing vocabulary. Maybe this improves numerical accuracy or something else is going on. Hard to say from the outside.
 
-So what is Jev? My guess is something built on gpt-oss. Diogo Almeida said on [Latent Space](https://www.latent.space/p/jev) that he wouldn't pre-train a model even with a billion dollars, so Jev is likely build on an open-weight model. Its tokenizer is o200k-like and gpt-oss is the only major open-weight model I know of that uses o200k. The single-digit splitting doesn't match stock gpt-oss, which suggests further training on top. That would fit his talk of Frankensteining models together.
+So what is Jev? My guess is something built on gpt-oss. Diogo Almeida said on [Latent Space](https://www.latent.space/p/jev) that he wouldn't pre-train a model even with a billion dollars, so Jev is likely built on an open-weight model. Its tokenizer is o200k-like and gpt-oss is the only major open-weight model I know of that uses o200k. The single-digit splitting doesn't match stock gpt-oss, which suggests further training on top. That would fit his talk of Frankensteining models together.
 
-> **Update** After publishing, I read Archer Hume's [Jev's Architecture Unmasked](https://archerhume.com/posts/jevs-architecture-unmasked/), which fingerprinted Jev's tokenizer against 192 public tokenizers. We independently agree on single-digit splitting and on Jev's vocabulary tracking o200k's. Their run-length finding may explain some of my remaining discrepencies.
+> **Update** After publishing, I read Archer Hume's [Jev's Architecture Unmasked](https://archerhume.com/posts/jevs-architecture-unmasked/), which fingerprinted Jev's tokenizer against 192 public tokenizers. We independently agree on single-digit splitting and on Jev's vocabulary tracking o200k's. Their run-length finding may explain some of my remaining discrepancies.
 
 ## A greedy search
 
