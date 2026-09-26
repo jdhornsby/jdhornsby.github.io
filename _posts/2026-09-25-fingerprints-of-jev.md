@@ -33,13 +33,15 @@ I started with a mix of common LLM and encoder tokenizers:
 | DeBERTa3 | `microsoft/deberta-v3-base` | encoder |
 | XLM-R | `FacebookAI/xlm-roberta-base` | multilingual encoder |
 | ModernBERT | `answerdotai/ModernBERT-base` | encoder |
-| o200k-qwenpre | Frankenstein | o200k with a Qwen3 pretokenizer |
+| o200k-qwenpre | `o200k_base` / `Qwen/Qwen3-8B` | o200k with a Qwen3 pretokenizer |
 
-o200k was close on almost everything except digits, where Jev matched Qwen3 and Gemma2 instead. Both split numbers into single digits. I wondered how well o200k would do with Qwen's pretokenizer bolted on, so I added it to the list. It's the best match. Digits and contractions line up, and everything else is unchanged from base o200k. The remaining differences are mostly emoji, where Jev still uses more tokens than o200k.
+o200k was close on almost everything except digits, where Jev matched Qwen3 and Gemma2 instead. Both split numbers into single digits. I wondered how well o200k would do with Qwen's pretokenizer bolted on, so I added it to the list. Overall, o200k-qwenpre matches Jev exactly on about 77% of probes. Digits and contractions line up, and everything else is unchanged from base o200k. The remaining differences are mostly emoji, where Jev still uses more tokens than o200k.
 
-Every difference seems to be Jev splitting text into smaller tokens than o200k does, but still within o200k's existing vocabulary. Maybe this improves numerical accuracy or something else is going on. Hard to say from the outside.
+Every difference is consistent with Jev splitting text into smaller tokens than o200k does, while staying within o200k's existing vocabulary. Maybe this improves numerical accuracy or something else is going on. Hard to say from the outside.
 
-So what is Jev? My guess is something from the gpt-oss family. Its tokenizer is o200k-like. TypeSafe's CEO Diogo Almeida came from OpenAI. On [Latent Space](https://www.latent.space/p/jev) he said he wouldn't pre-train a model even if you gave him a billion dollars, and he talked about Frankensteining models together as a way to solve problems. So maybe gpt-oss was a natural starting point. Frankensteining would also fit a Qwen pretokenizer bolted onto an o200k base.
+So what is Jev? My guess is something built on gpt-oss. Diogo Almeida said on [Latent Space](https://www.latent.space/p/jev) that he wouldn't pre-train a model even with a billion dollars, so Jev is likely build on an open-weight model. Its tokenizer is o200k-like and gpt-oss is the only major open-weight model I know of that uses o200k. The single-digit splitting doesn't match stock gpt-oss, which suggests further training on top. That would fit his talk of Frankensteining models together.
+
+> **Update** After publishing, I read Archer Hume's [Jev's Architecture Unmasked](https://archerhume.com/posts/jevs-architecture-unmasked/), which fingerprinted Jev's tokenizer against 192 public tokenizers. We independently agree on single-digit splitting and on Jev's vocabulary tracking o200k's. Their run-length finding may explain some of my remaining discrepencies.
 
 ## A greedy search
 
@@ -103,7 +105,7 @@ This fun experiment tells us a little about Jev's tokenizer. It doesn't tell us 
 
 I only tried some common tokenizers. There could be one out there that is a perfect match. If you know one, try it out. Repo link is below.
 
-I am trusting that the input token count they return is accurate. They could be undercounting, rounding, or doing something else.
+I am trusting that the input token count they return is accurate. They could be undercounting, rounding, or using a different tokenizer for billing.
 
 The test was run in late September 2026 on jev 1.13. It could change.
 
