@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Considering the limited time"
-excerpt: "I added thinking to my chess harness expecting the models to commit to better moves. Instead they collapsed into noise, and the fix was in Qwen's docs, which I should have read first."
+excerpt: "I expected thinking models to commit to their chess moves. They mostly wanted two newlines."
 date: 2026-10-01 20:00:00 +0000
 image: /assets/images/considering-the-limited-time/considering-the-limited-time.png
 ---
